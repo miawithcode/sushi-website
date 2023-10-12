@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 
 // init AOS animation
 AOS.init({
-  disable: "phone",
+  // disable: "phone",
   duration: 1500,
   offset: 100,
 });
