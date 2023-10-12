@@ -1,0 +1,369 @@
+.hero {
+  display: flex;
+  overflow: hidden;
+  min-height: calc(100vh - (1.25rem + 1.25rem + 2rem));
+}
+
+.hero__img-wrapper {
+  display: none;
+}
+
+.hero__content {
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-image: url('/sushi-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  position: relative;
+
+}
+
+.hero__content-info {
+  padding: 2.5rem;
+  flex: 1.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.hero__title {
+  font-size: var(--size-3xl);
+}
+
+.hero__description {
+  font-size: var(--size-sm);
+}
+
+.hero__btns {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.hero__order-btn,
+.hero__how-btn {
+  font-size: var(--size-sm);
+  padding: 0.5em 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 46px;
+}
+
+.hero__order-btn {
+  background-color: var(--clr-secondary);
+  color: var(--clr-creamson);
+  font-weight: 500;
+  border: 1px solid var(--clr-secondary);
+  transition: backrgound-color 0.3s, color 0.3s;
+}
+
+.hero__order-btn:hover {
+  background-color: var(--clr-creamson);
+  color: var(--clr-secondary);
+  border: 1px solid var(--clr-secondary);
+}
+
+.hero__how-btn {
+  color: var(--clr-black200);
+  background-color: transparent;
+  font-weight: 500;
+  border: 1px solid transparent;
+
+  transition: backrgound-color 0.3s, color 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--size-sm);
+  gap: 0.5em;
+}
+
+.hero__how-btn img {
+  width: var(--size-4xl);
+  height: var(--size-4xl);
+  object-fit: contain;
+}
+
+.hero__testimonial {
+  flex: 0.5;
+  padding: 1em 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background-color: var(--clr-white);
+}
+
+.hero__customer {
+  flex: 1;
+  gap: 1rem;
+}
+
+.hero__customer-number {
+  font-size: var(--size-5xl);
+  font-weight: 400;
+  font-family: var(--playfair-display);
+}
+
+.hero__customer-description {
+  display: block;
+  font-size: var(--size-base);
+  font-weight: 400;
+  color: var(--clr-secondary);
+  font-family: var(--plus-jakarta-sans);
+  opacity: 0.5;
+}
+
+.hero__line {
+  display: none;
+}
+
+.hero__review-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 200px;
+}
+
+.hero__user {
+  width: var(--size-4xl);
+  height: var(--size-4xl);
+  object-fit: contain;
+}
+
+.hero__quote {
+  font-size: var(--size-sm);
+  font-weight: 400;
+  color: var(--clr-secondary-);
+  opacity: 0.8;
+}
+
+/* xs  */
+@media (min-width: 475px) {
+  .hero {
+    min-height: calc(100vh - (1.25rem + 1.25rem + 2rem));
+    overflow: hidden;
+  }
+
+  .hero__content::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0rem;
+    left: -5rem;
+    background-image: url('/sushi-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -10;
+  }
+
+  .hero__content-info {
+    gap: 1.5rem;
+  }
+
+  .hero__title {
+    font-size: var(--size-4xl);
+  }
+
+  .hero__description {
+    font-size: var(--size-base);
+  }
+
+  .hero__order-btn,
+  .hero__how-btn {
+    font-size: var(--size-sm);
+    padding: 1em 0;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 46px;
+  }
+
+  .hero__how-btn img {
+    width: var(--size-5xl);
+    height: var(--size-5xl);
+  }
+
+  .hero__testimonial {
+    gap: 2rem;
+  }
+
+  .hero__customer {
+    gap: 1.5rem;
+  }
+
+  .hero__customer-number {
+    font-size: var(--size-6xl);
+  }
+
+  .hero__customer-description {
+    font-size: var(--size-base);
+  }
+
+  .hero__review-container {
+    gap: 1.5rem;
+  }
+
+  .hero__user {
+    width: var(--size-5xl);
+    height: var(--size-5xl);
+  }
+
+  .hero__quote {
+    font-size: var(--size-base);
+  }
+}
+
+/* sm  */
+@media (min-width: 640px) {
+  .hero {
+    min-height: calc(100vh - (1.25rem + 1.25rem + 1.85rem));
+    overflow: hidden;
+  }
+
+  .hero__content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* md  */
+@media (min-width: 768px) {
+  .hero {
+    min-height: calc(100vh - (1.25rem + 1.25rem + 1.5rem));
+    overflow: hidden;
+  }
+
+  .hero__title {
+    font-size: var(--size-5xl);
+  }
+
+  .hero__content::after {
+    display: none;
+  }
+
+  .hero__img-wrapper {
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .hero__img {
+    width: 120%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 10;
+  }
+
+  .hero__img-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-primary);
+    z-index: -1;
+  }
+
+  /* .hero__img-wrapper h2 {
+    font-size: var(--size-8xl);
+    position: absolute;
+    bottom: 0%;
+    padding: 0 1.25rem;
+    color: var(--clr-white);
+    font-weight: 800;
+    line-height: 7rem;
+  } */
+
+  .hero__order-btn,
+  .hero__how-btn {
+    font-size: var(--size-base);
+    padding: 0.5em 0;
+    width: 12rem;
+    border-radius: 46px;
+  }
+
+  .hero__how-btn img {
+    width: var(--size-4xl);
+    height: var(--size-4xl);
+  }
+
+  .hero__customer-number {
+    font-size: var(--size-5xl);
+  }
+
+  .hero__customer-description {
+    font-size: var(--size-base);
+  }
+
+  .hero__user {
+    width: var(--size-5xl);
+    height: var(--size-5xl);
+  }
+
+  .hero__quote {
+    font-size: var(--size-lg);
+  }
+}
+
+/* lg  */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: calc(100vh - (1.25rem + 1.25rem + 1.74rem));
+    overflow: hidden;
+  }
+
+  .hero__line {
+    display: block;
+    border: 1px solid rgba(18, 18, 18, 0.1);
+    padding-top: 7rem;
+  }
+
+  .hero__title {
+    font-size: var(--size-6xl);
+  }
+
+  .hero__description {
+    font-size: var(--size-lg);
+  }
+
+  .hero__order-btn,
+  .hero__how-btn {
+    font-size: var(--size-base);
+    padding: 0.5em 0;
+    width: 12rem;
+    border-radius: 46px;
+  }
+
+  .hero__how-btn img {
+    width: var(--size-5xl);
+    height: var(--size-5xl);
+  }
+
+}
+
+/* xl  */
+@media (min-width: 1280px) {
+  .hero {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero__content-info {
+    padding-left: 4rem;
+  }
+}
+
+/* 2xl  */
+/* @media (min-width: 1536px) {} */

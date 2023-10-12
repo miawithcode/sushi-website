@@ -1,0 +1,135 @@
+.subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+
+  padding: 4rem 0;
+  background-color: var(--clr-primary);
+  background-image: url('/subscribe_bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  overflow: hidden;
+}
+
+.subscription__title {
+  color: var(--clr-white);
+  font-size: var(--size-3xl);
+}
+
+.subscription__description {
+  font-size: var(--size-sm);
+  color: var(--clr-white);
+}
+
+.subscription__form {
+  /* min-width: 480px; */
+  padding: 0.3rem 0.3rem 0.3rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 46px;
+}
+
+.subscription__input {
+  flex: 1;
+  font-size: var(--size-sm);
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.subscription__input::placeholder {
+  color: var(--clr-white);
+  opacity: 0.5;
+}
+
+.subscription__btn {
+  flex: 1;
+  padding: 0.7rem 1.2rem;
+  font-size: var(--size-sm);
+  font-weight: 500;
+  background-color: var(--clr-black200);
+  color: var(--clr-white);
+  border-radius: 32px;
+}
+
+/* xs  */
+@media (min-width: 475px) {
+  .subscription {
+    gap: 1.5rem;
+  }
+  
+  .subscription__title {
+    font-size: var(--size-4xl);
+  }
+  
+  .subscription__description {
+    font-size: var(--size-base);
+  }
+  
+  .subscription__form {
+    padding: 0.6rem 0.6rem 0.6rem 2rem;
+    gap: 1rem;
+  }
+  
+  .subscription__input {
+    font-size: var(--size-base);
+  }
+  
+  .subscription__btn {
+    padding: 1rem 1.5rem;
+    font-size: var(--size-base);
+  }
+}
+
+/* sm  */
+/* @media (min-width: 640px) {} */
+
+/* md  */
+@media (min-width: 768px) {
+  
+  .subscription__title {
+    font-size: var(--size-5xl);
+  }
+}
+
+/* lg  */
+@media (min-width: 1024px) {
+  .subscription {
+    gap: 2rem;
+  }
+  
+  .subscription__title {
+    font-size: var(--size-6xl);
+  }
+  
+  .subscription__description {
+    font-size: var(--size-xl);
+  }
+  
+  .subscription__form {
+    padding: 1rem 1rem 1rem 2rem;
+    gap: 2rem;
+  }
+  
+  .subscription__input {
+    font-size: var(--size-xl);
+  }
+  
+  .subscription__btn {
+    padding: 1rem 2rem;
+    font-size: var(--size-xl);
+  }
+}
+
+/* xl  */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl  */
+/* @media (min-width: 1536px) {} */

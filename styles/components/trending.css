@@ -1,0 +1,266 @@
+.trending {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.trending__sushi,
+.trending__drink {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending__content {
+  flex: 50%;
+  padding: 6rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.trending__subtitle {
+  font-size: var(--size-sm);
+}
+
+.trending__title {
+  font-size: var(--size-3xl);
+}
+
+.trending__description {
+  font-size: var(--size-sm);
+}
+
+.trending__ul-container {
+  display: flex;
+  width: 100%;
+}
+
+.trending__btn-mobile {
+  display: flex;
+  gap: 1em;
+  border-radius: 32px;
+  font-size: var(--size-sm);
+  margin-top: 1em;
+}
+
+.trending__btn-mobile svg {
+  width: var(--size-sm);
+  height: var(--size-sm);
+}
+
+.trending__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style: none;
+  flex: 1;
+  font-size: var(--size-sm);
+}
+
+.trending__list {
+  font-size: var(--size-sm);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--clr-secondary);
+}
+
+.trending__list::before {
+  content: "";
+  display: block;
+  padding: 0.5rem;
+  background-image: url("/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+}
+
+.trending__img-wrapper {
+  flex: 50%;
+  padding: 2rem 2rem;
+  background-color: var(--clr-white);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending__sushi .trending__img-wrapper {
+  display: flex;
+  justify-content: center;
+
+  background-image: url("/japanese_sushi.png");
+}
+
+.trending__drink .trending__img-wrapper {
+  display: flex;
+  justify-content: center;
+
+  background-image: url("/japanese_drinks.png");
+}
+
+.trending__img {
+  /* width: 15.875rem;
+  height: 16.25rem; */
+  width: 12.875rem;
+  height: 13.25rem;
+  object-fit: contain;
+}
+
+.trending__btn {
+  display: none;
+}
+
+/* xs  */
+@media (min-width: 475px) {
+  .trending__content {
+    gap: 1rem;
+  }
+
+  .trending__subtitle {
+    font-size: var(--size-base);
+  }
+
+  .trending__title {
+    font-size: var(--size-4xl);
+  }
+
+  .trending__description {
+    font-size: var(--size-base);
+  }
+
+  .trending__btn-mobile {
+    font-size: var(--size-base);
+  }
+
+  .trending__btn-mobile svg {
+    width: var(--size-base);
+    height: var(--size-base);
+  }
+
+  .trending__ul {
+    font-size: var(--size-base);
+  }
+
+  .trending__list::before {
+    padding: 0.6rem;
+  }
+
+  .trending__img-wrapper {
+    padding: 4rem 4rem;
+  }
+
+  .trending__img {
+    width: 13.875rem;
+    height: 14.25rem;
+  }
+}
+
+/* sm  */
+/* @media (min-width: 640px) {} */
+
+/* md  */
+@media (min-width: 768px) {
+  .trending__content {
+    padding: 6rem 4rem;
+  }
+
+  .trending__sushi {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .trending__drink {
+    flex-direction: row-reverse;
+  }
+
+  .trending__btn-mobile {
+    display: none;
+  }
+
+  .trending__title {
+    font-size: var(--size-5xl);
+  }
+
+  .trending__img {
+    width: 14.875rem;
+    height: 15.25rem;
+  }
+
+  .trending__btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+    border-radius: 50%;
+
+    width: var(--size-10xl);
+    height: var(--size-10xl);
+    z-index: 10;
+
+    text-transform: uppercase;
+
+    font-size: var(--size-lg);
+    font-weight: 500;
+  }
+
+}
+
+/* lg  */
+@media (min-width: 1024px) {
+  .trending__content {
+    gap: 1.5rem;
+  }
+
+  .trending__subtitle {
+    font-size: var(--size-lg);
+  }
+
+  .trending__title {
+    font-size: var(--size-6xl);
+  }
+
+  .trending__description {
+    font-size: var(--size-lg);
+  }
+
+  .trending__btn-mobile {
+    font-size: var(--size-lg);
+  }
+
+  .trending__btn-mobile svg {
+    width: var(--size-lg);
+    height: var(--size-lg);
+  }
+
+  .trending__ul {
+    font-size: var(--size-lg);
+  }
+}
+
+/* xl  */
+@media (min-width: 1280px) {
+  .trending {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* 2xl  */
+/* @media (min-width: 1536px) {} */
